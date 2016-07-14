@@ -77,7 +77,6 @@ for i=2,#arg do
   local probs, indexes = output:topk(N, true, true)
   print('Classes for', arg[i])
 
-  --local frame = torch.FloatTensor(img:size(1),img:size(2)*2,img:size(3))
   for n=1,1 do
     print(probs[n], imagenetLabel[indexes[n]])
     map = image.scale(featuremap[indexes[n]]:float(), img:size(2),img:size(3))
@@ -88,7 +87,6 @@ for i=2,#arg do
     frame = torch.cat(im, map, 3)
     frame=image.drawText(frame, imagenetLabel[indexes[n]], 10, 10)
     image.save(string.format('images/%s.png', name), frame)
-    --print(#map)
   end
 end
 
