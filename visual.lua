@@ -59,9 +59,7 @@ for i=2,#arg do
   -- load the image as a RGB float tensor with values 0..1
   local img = image.load(arg[i], 3, 'float')
   local im = img:clone()
-
-  local basename = paths.basename(arg[i])
-  local name = arg[i]:match( "([^/]+)$" )
+  local name = paths.basename(arg[i], 'JPEG')
 
   -- Scale, normalize, and crop the image
   img = transform(img)
@@ -89,7 +87,7 @@ for i=2,#arg do
     map = img:mul(0.2)+map:mul(0.8)
     frame = torch.cat(im, map, 3)
     frame=image.drawText(frame, imagenetLabel[indexes[n]], 10, 10)
-    image.save(string.format('images/%s.png', basename), frame)
+    image.save(string.format('images/%s.png', name), frame)
     --print(#map)
   end
 end
