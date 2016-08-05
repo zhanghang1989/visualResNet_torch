@@ -7,12 +7,12 @@ without modifying the network or re-training. (MatConvNet re-implementation can 
 
 ### Get Started
 
-- The code relies on [Torch](https://github.com/torch/torch7), which should be downloaded and built before running the experiments. 
-
-- Download the models from [facebook git](https://github.com/facebook/fb.resnet.torch/tree/master/pretrained) download the code:
+- The code relies on [Torch](https://github.com/torch/torch7), which should be downloaded and built before running the experiments. Download the code:
 ```sh
 git clone https://github.com/zhanghang1989/visualResNet_torch.git
 ```
+
+- Download the models from [facebook git](https://github.com/facebook/fb.resnet.torch/tree/master/pretrained) 
 
 - Run the progrem:
 ```sh
