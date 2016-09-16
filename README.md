@@ -8,15 +8,20 @@ without modifying the network or re-training. (MatConvNet re-implementation can 
 ### Get Started
 
 - The code relies on [Torch](https://github.com/torch/torch7), which should be downloaded and built before running the experiments. Download the code:
-```sh
+```bash
 git clone https://github.com/zhanghang1989/visualResNet_torch.git
 ```
 
 - Download the models from [facebook git](https://github.com/facebook/fb.resnet.torch/tree/master/pretrained) 
 
 - Run the progrem:
-```sh
+```bash
 th visual.lua resnet-50.t7 data/1.JPEG data/2.JPEG 
+```
+
+- Visualize all the images in a folder
+```bash
+th visual.lua resnet-50.t7 data/*
 ```
 
 ### Examples
